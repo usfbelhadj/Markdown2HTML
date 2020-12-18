@@ -14,8 +14,7 @@ if __name__ == "__main__":
     for i in range(1, len(sys.argv)):
         if sys.argv[i] not in list_file:
             print("Missing {}".format(sys.argv[i]))
-        else:
-            pass
+            exit(1)
     h = 0
     x = ''
     m = ''
