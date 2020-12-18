@@ -14,3 +14,21 @@ for i in range(1, len(sys.argv)):
         print("Missing {}".format(sys.argv[i]))
     else:
         pass
+h = 0
+x = ''
+m = ''
+st = ''
+t = []
+with open(sys.argv[1], "r") as main_file:
+    for line in main_file.readlines():
+        for c in line:
+            if c == '#':
+                h+=1
+            if c !='#':
+                st+=c
+            t = st.split('\n')
+        m += str(h)
+        h = 0
+    for i in range(len(t)):
+        with open(sys.argv[2], "a") as put_file:
+            put_file.write("<h{}>{}<h{}/>".format(1*(int(x) for j in m),t[i], 1*(int(x) for j in m))
