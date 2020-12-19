@@ -12,9 +12,9 @@ if __name__ == "__main__":
         exit(1)
     '''Markdown file doesn’t exist'''
     for i in range(1, len(sys.argv)):
-        path_file = f"/home/djo/Specializations/Markdown2HTML/{sys.argv[i]}"
+        path_file = sys.argv[i]
         if not path.exists(path_file):
-            print(f"Missing {sys.argv[i]}", file=sys.stderr)
+            print("Missing {}".format(sys.argv[i]), file=sys.stderr)
             exit(1)
     '''Headings Markdown'''
     with open(sys.argv[1], 'r') as read_file:
