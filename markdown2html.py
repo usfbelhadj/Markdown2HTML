@@ -11,11 +11,9 @@ if __name__ == "__main__":
         print("Usage: ./markdown2html.py README.mdREADME.html", file=sys.stderr)
         exit(1)
     '''Markdown file doesn’t exist'''
-    for i in range(1, len(sys.argv)):
-        path_file = sys.argv[i]
-        if not path.exists(path_file):
-            print("Missing {}".format(sys.argv[i]), file=sys.stderr)
-            exit(1)
+    if not path.exists(sys.argv[1]):
+    	print('Missing {}'.format(sys.argv[1]) ,file=sys.stderr)
+        exit(1)
     '''Headings Markdown'''
     with open(sys.argv[1], 'r') as read_file:
         for lines in read_file.readlines():
