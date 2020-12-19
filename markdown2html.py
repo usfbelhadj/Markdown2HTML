@@ -7,7 +7,7 @@ from os import path
 if __name__ == "__main__":
     line_list = []
     '''the number of arguments is less than 2'''
-    if len(sys.argv) < 3:
+    if len(sys.argv) != 3:
         print("Usage: ./markdown2html.py README.mdREADME.html", file=sys.stderr)
         exit(1)
     '''Markdown file doesn’t exist'''
