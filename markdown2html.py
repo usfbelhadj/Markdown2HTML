@@ -5,7 +5,6 @@ from os import path
 
 
 if __name__ == "__main__":
-    line_list = []
     '''the number of arguments is less than 2'''
     if len(sys.argv) != 3:
         print('Usage: ./markdown2html.py README.md README.html' ,file=sys.stderr)
@@ -16,6 +15,7 @@ if __name__ == "__main__":
         exit(1)
     '''Headings Markdown'''
     with open(sys.argv[1], 'r') as read_file:
+        line_list = []
         for lines in read_file.readlines():
             cout_cra = 0
             for line in lines:
