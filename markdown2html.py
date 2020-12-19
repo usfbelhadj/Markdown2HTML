@@ -12,7 +12,7 @@ if __name__ == "__main__":
         exit(1)
     '''Markdown file doesn’t exist'''
     if not path.exists(sys.argv[1]):
-    	print('Missing {}'.format(sys.argv[1]) ,file=sys.stderr)
+        print('Missing {}'.format(sys.argv[1]), file=sys.stderr)
         exit(1)
     '''Headings Markdown'''
     with open(sys.argv[1], 'r') as read_file:
